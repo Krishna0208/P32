@@ -30,7 +30,7 @@ var option = {
 polygon = Bodies.circle(100,350,20,option);
 World.add(world,polygon);
 
-slingshot =  new Slingshot(this.polygon,{x:150, y:350});
+slingshot =  new Slingshot(polygon,{x:150, y:350});
 
 ground1 = new Ground(500,500,350,15);
 ground2 = new Ground(1000,350,300,15);
@@ -112,7 +112,15 @@ box22.display();
 } 
 
 function mouseDragged(){
-   Body.setPosition(polygon, {x: mouseX , y: mouseY});
+    Body.setPosition(polygon, {x: mouseX , y: mouseY});
+}
+
+function keyPressed(){
+    if(keyCode === 32) {
+    slingshot.attach(polygon);
+    Body.setPosition(polygon,{x: 100, y: 350});
+    
+    }
 }
 
 
