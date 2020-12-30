@@ -10,6 +10,8 @@ var ground1, ground2;
 var box1, box2, box3, box4, box5, box6, box7, box8, box9, box10, box11, box12, box13;
 var box14, box15, box16, box17, box18, box19, box20, box21, box22;
 
+var score = 0;
+
 function preload() {
    polygonImg = loadImage("polygon.png");
 
@@ -82,18 +84,22 @@ box4.display();
 box5.display();
 box6.display();
 
+
 fill("pink");
 box7.display();
 box8.display();
 box9.display();
 box10.display();
 
+
 fill("magenta");
 box11.display();
 box12.display();
 
+
 fill("#87CEEA");
 box13.display();
+
 
 fill("#63E1D1");
 box14.display();
@@ -102,13 +108,45 @@ box16.display();
 box17.display();
 box18.display();
 
+
 fill("#F6BFCA");
 box19.display();
 box20.display();
 box21.display();
 
+
 fill("#808080");
 box22.display();
+
+
+
+box1.score();
+box2.score();
+box3.score();
+box4.score();
+box5.score();
+box5.score();
+box6.score();
+box7.score();
+box8.score();
+box9.score();
+box10.score();
+box11.score();
+box12.score();
+box13.score();
+box14.score();
+box15.score();
+box16.score();
+box17.score();
+box18.score();
+box19.score();
+box20.score();
+box21.score();
+box22.score();
+
+fill("white");
+textSize(30);
+text("Score: "+score,50,50);
 } 
 
 function mouseDragged(){
